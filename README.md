@@ -35,4 +35,4 @@ Proyek ini adalah sebuah website sederhana bernama MJAPHONESTORE yang berfokus p
 
 ## 7. Sumber Referensi dan Catatan Pemakaian AI
 - **Sumber Referensi:** Dokumentasi resmi PHP (php.net) dan panduan CSS modern.
-- **Catatan Pemakaian AI:** Menggunakan bantuan Google Gemini AI sebagai *thought partner* untuk merapikan struktur antarmuka (HTML/CSS), memperbaiki *syntax error* saat pengembangan logika PHP, dan menyusun kerangka dokumen README ini.
+- **Catatan Pemakaian AI:** Saya menggunakan AI (Google Gemini) untuk membantu menyempurnakan tata letak CSS dan mencari letak syntax error pada pemanggilan gambar. Saya memeriksa kode yang dihasilkan dengan mengujinya di localhost, mereview alur data pada blok foreach, dan memodifikasi sendiri nilai parameter pada fungsi match() agar sesuai dengan standar status stok toko saya.
