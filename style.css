@@ -1,0 +1,281 @@
+:root {
+    --warna-utama: #2563eb;
+    --warna-gelap: #1e293b;
+    --warna-bg: #f1f5f9;
+    --warna-teks: #334155;
+    --warna-pudar: #64748b;
+    --bayangan: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --radius: 12px;
+}
+
+* { 
+    box-sizing: border-box; margin: 0; padding: 0; 
+}
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    line-height: 1.6; 
+    background-color: var(--warna-bg); 
+    color: var(--warna-teks); 
+    padding: 30px 20px; 
+}
+
+/* --- Area Header --- */
+.kepala { 
+    max-width: 900px; 
+    margin: 0 auto 40px; 
+    text-align: center; 
+    animation: turun 0.6s ease-out;
+}
+
+.wadah-judul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.kepala h1 { 
+    font-size: 2.2rem; 
+    font-weight: 700;
+    color: var(--warna-gelap);
+    letter-spacing: -0.5px;
+}
+
+.filter { 
+    margin-top: 15px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; 
+}
+.filter a { 
+    display: inline-block; 
+    padding: 8px 20px; 
+    border-radius: 30px; 
+    background-color: white;
+    color: var(--warna-gelap); 
+    text-decoration: none; 
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 2px solid transparent;
+    transition: all 0.3s ease; 
+}
+
+.filter a:hover { 
+    transform: translateY(-2px);
+    border-color: var(--warna-utama);
+}
+
+.filter a.aktif { 
+    background: linear-gradient(135deg, var(--warna-utama), #3b82f6); 
+    color: #ffffff; 
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* --- Area Profil (Grid Baru) --- */
+.grid-profil {
+     max-width: 900px; margin: 0 auto; animation: naik 0.6s ease-out;
+     }
+.box-profil { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 24px; 
+}
+
+@media (min-width: 768px) {
+    .box-profil { 
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+.kartu-profil {
+    background-color: #ffffff;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--bayangan);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.kartu-profil:hover { 
+    transform: translateY(-4px);
+ }
+
+.header-kartu {
+    background: linear-gradient(135deg, var(--warna-gelap), #334155);
+    color: white;
+    padding: 16px 24px;
+}
+
+.header-kartu h2 {
+     font-size: 1.2rem; font-weight: 600; 
+    }
+.isi-kartu {
+     padding: 24px;
+     }
+
+/* --- Biodata List --- */
+.list-biodata { 
+    display: flex; flex-direction: column; gap: 12px;
+}
+
+.baris-data { 
+    display: flex; 
+    justify-content: space-between; 
+    border-bottom: 1px dashed #cbd5e1;
+    padding-bottom: 8px;
+}
+
+.baris-data:last-child { 
+    border-bottom: none; padding-bottom: 0; 
+}
+
+.baris-data .label { 
+    color: var(--warna-pudar); font-size: 0.95rem;
+ }
+
+.baris-data .nilai { 
+    font-weight: 600; color: var(--warna-gelap); text-align: right; 
+}
+
+/* --- Styling Katalog (Tetap dipertahankan & diperbagus untuk katalog.php) --- */
+
+.grid { 
+    max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; 
+}
+
+.kartu {
+     background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: all 0.3s ease; 
+}
+
+.kartu:hover {
+     transform: translateY(-5px); box-shadow: var(--bayangan); border-color: var(--warna-utama);
+}
+
+.kartu h2 { 
+    font-size: 1.2rem; margin-top: 12px; color: var(--warna-gelap); 
+}
+
+.kategori { 
+    font-size: 0.85rem; color: var(--warna-pudar); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; 
+}
+
+.harga {
+     font-size: 1.3rem; font-weight: 700; color: #f59e0b; margin-top: 10px; 
+}
+
+.stok { 
+    font-size: 0.9rem; margin-top: 6px; font-weight: 500; 
+}
+
+.badge { 
+    display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; color: #ffffff; letter-spacing: 0.5px; 
+}
+
+.badge--aman {
+     background-color: #10b981; 
+}
+
+.badge--menipis { 
+    background-color: #f59e0b; 
+}
+
+.badge--habis { 
+    background-color: #ef4444; 
+}
+
+
+.kosong, .kaki { 
+    max-width: 900px; margin: 40px auto 20px; text-align: center; color: var(--warna-pudar); font-size: 0.9rem; 
+}
+
+
+/* --- Animasi --- */
+
+@keyframes turun {
+     from {
+         opacity: 0; transform: translateY(-20px); 
+        } to 
+        { 
+            opacity: 1; transform: translateY(0); 
+        } 
+}
+
+@keyframes naik {
+    from { 
+        opacity: 0; transform: translateY(20px); 
+    } to 
+    { 
+        opacity: 1; transform: translateY(0); 
+    } 
+}
+
+/* --- Tambahan untuk Katalog --- */
+
+.ringkasan-katalog {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.chip-info {
+    background: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--warna-pudar);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    border: 1px solid #e2e8f0;
+}
+
+.chip-info.aset strong {
+    color: var(--warna-utama);
+}
+
+.header-kartu-produk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sku {
+    font-size: 0.75rem;
+    color: var(--warna-pudar);
+    font-family: monospace;
+    background: #f1f5f9;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+.highlight-kondisi {
+    font-weight: 600;
+    color: var(--warna-gelap);
+}
+
+.footer-kartu-produk {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px dashed #cbd5e1;
+}
+
+.footer-kartu-produk .stok {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gambar-produk {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin: 15px 0 10px;
+    border-radius: 8px;
+    background-color: #f8fafc;
+}
